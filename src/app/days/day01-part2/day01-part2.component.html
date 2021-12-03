@@ -1,0 +1,18 @@
+<app-star [day]="1" [isPart2]="true" [(input)]="input" [result]="result | async"></app-star>
+
+<div class="columns">
+  <section>
+    <h4>Input</h4>
+    <pre><code>{{ inputObservable | async }}</code></pre>
+  </section>
+
+  <section>
+    <h4>slidingValues</h4>
+    <pre><code>{{ slidingValues }}</code></pre>
+  </section>
+
+  <section>
+    <h4>deltas</h4>
+    <pre><code>{{ deltas }}</code></pre>
+  </section>
+</div>

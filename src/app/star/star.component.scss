@@ -1,0 +1,23 @@
+:host {
+  display: block;
+}
+
+* + h4 {
+  margin-top: 2rem;
+}
+
+.input,
+.result {
+  width: 100%;
+  height: 2.5em;
+  min-height: initial;
+  box-sizing: border-box;
+  padding: 1ch 1em;
+  border: solid 1px #777;
+  border-radius: 0;
+  resize: vertical;
+}
+
+.input {
+  height: 10em;
+}
