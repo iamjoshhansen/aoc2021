@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Star } from '../../star/star';
-import { day3InputA as input } from 'src/app/days/day03/day3-input';
+import { day3InputExample as input } from 'src/app/days/day03/day3-input';
 
 @Component({
   selector: 'app-day03',
