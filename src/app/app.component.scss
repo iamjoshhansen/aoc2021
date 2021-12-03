@@ -1,7 +1,7 @@
 :host {
   display: grid;
   min-height: 100vh;
-  grid-template-columns: min-content minmax(400px, 1fr);
+  grid-template-columns: min-content 1fr;
   grid-template-rows: min-content 1fr;
   grid-template-areas:
     "header header"
@@ -45,4 +45,26 @@ h2 {
 
 .content {
   grid-area: content;
+}
+
+@media (max-width: 600px) {
+  :host,
+  .header {
+    display: block;
+  }
+
+  h1 {
+    font-size: 3em;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 2em;
+    text-align: center;
+  }
+
+  .nav {
+    width: fit-content;
+    margin: auto;
+  }
 }
