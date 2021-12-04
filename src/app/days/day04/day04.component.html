@@ -1,1 +1,20 @@
 <app-star [day]="4" [(input)]="input" [result]="result | async"></app-star>
+
+<h3>Bingo Boards</h3>
+<div class="boards">
+  <table
+    class="board"
+    [class.board--winner]="board.hasWon"
+    *ngFor="let board of boards"
+  >
+    <tr *ngFor="let row of board.grid">
+      <td *ngFor="let cell of row" class="board__cell">
+        <span
+          class="board__cell__number"
+          [class.board__cell__number--marked]="marked.includes(cell)"
+          >{{ cell }}</span
+        >
+      </td>
+    </tr>
+  </table>
+</div>

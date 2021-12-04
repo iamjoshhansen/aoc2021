@@ -6,9 +6,9 @@ import { sum } from 'src/app/utils/sum';
 
 class BingoBoard {
   private readonly marked = new Set<number>();
-  private readonly grid: number[][];
-  private readonly width: number;
-  private readonly height: number;
+  public readonly grid: number[][];
+  public readonly width: number;
+  public readonly height: number;
 
   constructor(public readonly textGrid: string) {
     this.grid = textGrid.split('\n').map((line) =>
@@ -76,6 +76,9 @@ export class Day04Component extends Star implements OnInit {
     this.input = input;
   }
 
+  boards: BingoBoard[] = [];
+  marked: number[] = [];
+
   async solve(input: string) {
     const rows = input.split('\n');
 
@@ -89,6 +92,7 @@ export class Day04Component extends Star implements OnInit {
     const boardsText = rows.join('\n').trim().split('\n\n');
 
     const boards: BingoBoard[] = boardsText.map((text) => new BingoBoard(text));
+    this.boards = boards;
 
     // Play Bingo!!
 
@@ -99,6 +103,7 @@ export class Day04Component extends Star implements OnInit {
     while (winners.length === 0 && ++calloutCursor < calloutLength) {
       const callout = callouts[calloutCursor];
       boards.forEach((board) => {
+        this.marked.push(callout);
         board.mark(callout);
         if (board.hasWon) {
           winners.push(board);
