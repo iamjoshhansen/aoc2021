@@ -13,6 +13,8 @@ import { Day03Component } from './days/day03/day03.component';
 import { StarComponent } from './star/star.component';
 import { Day04Component } from './days/day04/day04.component';
 import { Day04Part2Component } from './days/day04-part2/day04-part2.component';
+import { Day05Component } from './days/day05/day05.component';
+import { Day05Part2Component } from './days/day05-part2/day05-part2.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { Day04Part2Component } from './days/day04-part2/day04-part2.component';
     Day03Part2Component,
     Day04Component,
     Day04Part2Component,
+    Day05Component,
+    Day05Part2Component,
   ],
   imports: [BrowserModule, FormsModule, AppRoutingModule],
   providers: [],
