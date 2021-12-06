@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { Star } from '../../star/star';
 import { day4InputExample as input } from 'src/app/days/day04/day4-input';
-import { sum } from 'src/app/utils/sum';
+import { sum } from 'src/app/utils';
 
 class BingoBoard {
   private readonly marked = new Set<number>();

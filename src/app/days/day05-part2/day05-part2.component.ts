@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Star } from 'src/app/star/star';
 import { day5InputExample as input } from 'src/app/days/day05/day5-input';
-import { range } from 'src/app/utils/range';
+import { range } from 'src/app/utils';
 
 interface Point {
   x: number;

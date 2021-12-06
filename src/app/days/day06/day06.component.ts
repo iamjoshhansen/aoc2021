@@ -8,8 +8,7 @@ import {
 import { day6InputExample as input } from 'src/app/days/day06/day6-input';
 
 import { Star } from 'src/app/star/star';
-import { range } from 'src/app/utils/range';
-import { toInt } from 'src/app/utils/to-int';
+import { range, toInt } from 'src/app/utils';
 
 class LanternFish {
   constructor(

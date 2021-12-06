@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Star } from 'src/app/star/star';
 import { day6InputExample as input } from 'src/app/days/day06/day6-input';
-import { toInt } from 'src/app/utils/to-int';
-import { sum } from 'src/app/utils/sum';
-import { copy } from 'src/app/utils/copy';
+import { toInt, sum, copy } from 'src/app/utils';
 
 class LanternFishSchool {
   private _counts: Record<number, number> = {};

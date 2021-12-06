@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { day4InputExample as input } from 'src/app/days/day04/day4-input';
-import { sum } from 'src/app/utils/sum';
+import { sum } from 'src/app/utils';
 
 import { Star } from '../../star/star';
 

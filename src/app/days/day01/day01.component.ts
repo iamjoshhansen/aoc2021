@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Star } from '../../star/star';
-import { textToArrayOfNumbers } from '../../utils/text-to-array-of-numbers';
 import { day1InputExample as input } from 'src/app/days/day01/day1-input';
+import { textToArrayOfNumbers } from 'src/app/utils';
 
 @Component({
   selector: 'app-day01',

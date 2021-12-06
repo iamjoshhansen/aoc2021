@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { day1InputExample as input } from 'src/app/days/day01/day1-input';
 
 import { Star } from '../../star/star';
-import { textToArrayOfNumbers } from '../../utils/text-to-array-of-numbers';
+import { textToArrayOfNumbers } from 'src/app/utils';
 
 @Component({
   selector: 'app-day01-part2',
