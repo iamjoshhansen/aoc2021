@@ -94,6 +94,9 @@ export class Day06Component extends Star implements AfterViewInit, OnInit {
     this.canvas.height = this.canvas.parentElement!.clientHeight;
     this.ctx = this.canvas.getContext('2d')!;
 
+    this.ctx.fillStyle = '#009';
+    this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
+
     for (let i = 0; i < count; i++) {
       this.drawOneFish();
     }
