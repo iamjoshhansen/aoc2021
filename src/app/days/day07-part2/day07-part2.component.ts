@@ -14,27 +14,34 @@ export class Day07Part2Component extends Star implements OnInit {
     this.input = input;
   }
 
+  costs: number[] = [];
+  best = 0;
+  worst = 1;
+  count = 1;
+
   async solve(input: string) {
     const crabs = input.split(',').map(toInt);
+    this.count = crabs.length;
 
     const min = Math.min(...crabs);
     const max = Math.max(...crabs);
 
-    const costs: { pos: number; cost: number }[] = [...range(min, max)].map(
-      (pos) => ({
-        pos,
-        cost: sum(
-          crabs.map((p) => {
-            const dist = Math.abs(p - pos);
-            return (dist * (dist + 1)) / 2;
-          })
-        ),
-      })
+    const costs: number[] = [...range(min, max)].map((pos) =>
+      sum(
+        crabs.map((p) => {
+          const dist = Math.abs(p - pos);
+          return (dist * (dist + 1)) / 2;
+        })
+      )
     );
 
-    sortBy(costs, 'cost');
-    const best = costs[0];
+    const maxCost = Math.max(...costs);
+    this.worst = maxCost;
+    this.costs = costs;
 
-    return `${best.cost}`;
+    const minCost = Math.min(...costs);
+    this.best = minCost;
+
+    return `${minCost}`;
   }
 }

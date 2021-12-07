@@ -2,3 +2,20 @@
   display: block;
   padding: 1rem;
 }
+
+.costs {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 200px;
+
+  &__cost {
+    width: 20px;
+    background: #00000066;
+    min-width: 1px;
+
+    &--best {
+      background: #000000cc;
+    }
+  }
+}

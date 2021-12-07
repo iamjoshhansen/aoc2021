@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Star } from 'src/app/star/star';
 import { day7InputExample as input } from 'src/app/days/day07/day7-input';
-import { range, sortBy, sum, toInt } from 'src/app/utils';
+import { Star } from 'src/app/star/star';
+import { range, sum, toInt } from 'src/app/utils';
 
 @Component({
   selector: 'app-day07',
@@ -14,22 +14,29 @@ export class Day07Component extends Star implements OnInit {
     this.input = input;
   }
 
+  costs: number[] = [];
+  best = 0;
+  worst = 1;
+  count = 1;
+
   async solve(input: string) {
     const crabs = input.split(',').map(toInt);
+    this.count = crabs.length;
 
     const min = Math.min(...crabs);
     const max = Math.max(...crabs);
 
-    const costs: { pos: number; cost: number }[] = [...range(min, max)].map(
-      (pos) => ({
-        pos,
-        cost: sum(crabs.map((p) => Math.abs(p - pos))),
-      })
+    const costs: number[] = [...range(min, max)].map((pos) =>
+      sum(crabs.map((p) => Math.abs(p - pos)))
     );
 
-    sortBy(costs, 'cost');
-    const best = costs[0];
+    const maxCost = Math.max(...costs);
+    this.worst = maxCost;
+    this.costs = costs;
 
-    return `${best.cost}`;
+    const minCost = Math.min(...costs);
+    this.best = minCost;
+
+    return `${minCost}`;
   }
 }

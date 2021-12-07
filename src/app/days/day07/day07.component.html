@@ -1,1 +1,10 @@
 <app-star [day]="7" [(input)]="input" [result]="result | async"></app-star>
+
+<div class="costs">
+  <div
+    *ngFor="let cost of costs"
+    class="costs__cost"
+    [class.costs__cost--best]="cost === best"
+    [ngStyle]="{ height: (100 * cost) / worst + '%', width: 100 / count + '%' }"
+  ></div>
+</div>
