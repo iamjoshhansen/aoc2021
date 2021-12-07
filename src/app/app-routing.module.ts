@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
 import { Day01Part2Component } from './days/day01-part2/day01-part2.component';
 import { Day01Component } from './days/day01/day01.component';
 import { Day02Part2Component } from './days/day02-part2/day02-part2.component';
@@ -12,6 +13,8 @@ import { Day05Part2Component } from './days/day05-part2/day05-part2.component';
 import { Day05Component } from './days/day05/day05.component';
 import { Day06Part2Component } from './days/day06-part2/day06-part2.component';
 import { Day06Component } from './days/day06/day06.component';
+import { Day07Part2Component } from './days/day07-part2/day07-part2.component';
+import { Day07Component } from './days/day07/day07.component';
 
 const routes: Routes = [
   {
@@ -61,6 +64,14 @@ const routes: Routes = [
   {
     path: 'day-06-part-2',
     component: Day06Part2Component,
+  },
+  {
+    path: 'day-07',
+    component: Day07Component,
+  },
+  {
+    path: 'day-07-part-2',
+    component: Day07Part2Component,
   },
 ];
 @NgModule({
