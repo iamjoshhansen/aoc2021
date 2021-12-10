@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Star } from 'src/app/star/star';
 import { day7InputExample as input } from 'src/app/days/day07/day7-input';
-import { range, sortBy, sum, toInt } from 'src/app/utils';
+import { range, sum, toInt } from 'src/app/utils';
 
 @Component({
   selector: 'app-day07-part2',
