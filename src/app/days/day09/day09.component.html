@@ -1,0 +1,23 @@
+<app-star [day]="9" [(input)]="input" [result]="result | async"></app-star>
+
+<table class="grid" *ngIf="grid">
+  <tr *ngFor="let row of grid.heights; let y = index">
+    <td
+      *ngFor="let cell of row; let x = index"
+      class="cell"
+      [class.cell--low-point]="grid.isCellLowpoint({x,y})"
+      [ngStyle]="{
+        background:
+          'rgb(' +
+          (255 - 90 + grid.getHeight({ x: this.x, y: this.y })! * 10) +
+          ',' +
+          (255 - 90 + grid.getHeight({ x: this.x, y: this.y })! * 10) +
+          ',' +
+          (255 - 90 + grid.getHeight({ x: this.x, y: this.y })! * 10) +
+          ')'
+      }"
+    >
+      {{ grid.getHeight({x,y}) }}
+    </td>
+  </tr>
+</table>

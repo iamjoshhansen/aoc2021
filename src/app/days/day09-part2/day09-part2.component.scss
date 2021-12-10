@@ -1,0 +1,27 @@
+:host {
+  display: block;
+  padding: 1rem;
+}
+
+.grid {
+  border-collapse: collapse;
+  margin: 0 auto;
+  font-size: 0.5em;
+}
+
+.cell {
+  width: 1.5em;
+  height: 1.5em;
+  text-align: center;
+  font-family: var(--font-mono);
+  padding: 0;
+
+  &--low-point {
+    background: #333 !important;
+    color: #fff;
+  }
+
+  &--high-point {
+    background: #f90 !important;
+  }
+}
