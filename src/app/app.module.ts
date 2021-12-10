@@ -20,6 +20,8 @@ import { Day06Part2Component } from './days/day06-part2/day06-part2.component';
 import { Day07Component } from './days/day07/day07.component';
 import { Day07Part2Component } from './days/day07-part2/day07-part2.component';
 import { CrabWalkComponent } from './days/day07/crab-walk/crab-walk.component';
+import { Day08Component } from './days/day08/day08.component';
+import { Day08Part2Component } from './days/day08-part2/day08-part2.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +42,8 @@ import { CrabWalkComponent } from './days/day07/crab-walk/crab-walk.component';
     Day07Component,
     Day07Part2Component,
     CrabWalkComponent,
+    Day08Component,
+    Day08Part2Component,
   ],
   imports: [BrowserModule, FormsModule, AppRoutingModule],
   providers: [],
