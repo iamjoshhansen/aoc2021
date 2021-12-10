@@ -1,25 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { day8InputExample as input } from 'src/app/days/day08/day8-input';
 import { Star } from 'src/app/star/star';
-import { sum } from 'src/app/utils';
-
-function difference(a: string, b: string): string {
-  return a
-    .split('')
-    .filter((c) => !b.includes(c))
-    .join('');
-}
-
-function union(items: string[]): string {
-  let res = items[0];
-  for (let i = 1; i < items.length; i++) {
-    res = res
-      .split('')
-      .filter((c) => items[i].includes(c))
-      .join('');
-  }
-  return res;
-}
+import { sum, diffString as strDiff, strUnion } from 'src/app/utils';
 
 class Line {
   readonly signals = this.row.split('|')[0].trim().toLowerCase().split(' ');
@@ -37,19 +19,19 @@ class Line {
     const count3 = count3s[0];
     const count4 = count4s[0];
 
-    const A = difference(count3, count4)[0];
-    const BD = difference(count4, count3);
-    const ADG = union(count5s);
-    const DG = difference(ADG, A);
-    const D = union([BD, DG]);
-    const G = difference(DG, D);
-    const B = difference(BD, D);
+    const A = strDiff(count3, count4)[0];
+    const BD = strDiff(count4, count3);
+    const ADG = strUnion(count5s);
+    const DG = strDiff(ADG, A);
+    const D = strUnion([BD, DG]);
+    const G = strDiff(DG, D);
+    const B = strDiff(BD, D);
     const CF = count2;
-    const CDE = difference('abcdefg', union(count6s));
-    const C = union([CDE, CF]);
-    const DE = difference(CDE, CF);
-    const E = difference(DE, D);
-    const F = difference('abcdefg', [A, B, C, D, E, G].join(''));
+    const CDE = strDiff('abcdefg', strUnion(count6s));
+    const C = strUnion([CDE, CF]);
+    const DE = strDiff(CDE, CF);
+    const E = strDiff(DE, D);
+    const F = strDiff('abcdefg', [A, B, C, D, E, G].join(''));
 
     // return { A, B, C, D, E, F, G };
     return {
