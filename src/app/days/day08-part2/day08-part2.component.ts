@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { day8InputExample as input } from 'src/app/days/day08/day8-input';
 import { Star } from 'src/app/star/star';
-import { sum, diffString as strDiff, strUnion } from 'src/app/utils';
+import { sum, strDiff, strUnion } from 'src/app/utils';
 
 class Line {
   readonly signals = this.row.split('|')[0].trim().toLowerCase().split(' ');
