@@ -19,6 +19,8 @@ import { Day08Part2Component } from './days/day08-part2/day08-part2.component';
 import { Day08Component } from './days/day08/day08.component';
 import { Day09Part2Component } from './days/day09-part2/day09-part2.component';
 import { Day09Component } from './days/day09/day09.component';
+import { Day10Part2Component } from './days/day10-part2/day10-part2.component';
+import { Day10Component } from './days/day10/day10.component';
 
 const routes: Routes = [
   {
@@ -92,6 +94,14 @@ const routes: Routes = [
   {
     path: 'day-09-part-2',
     component: Day09Part2Component,
+  },
+  {
+    path: 'day-10',
+    component: Day10Component,
+  },
+  {
+    path: 'day-10-part-2',
+    component: Day10Part2Component,
   },
 ];
 @NgModule({
