@@ -78,9 +78,13 @@ class Grid {
       const newOutline = new Map<string, Position>();
       outline.forEach((pos, id) => {
         this.getNeighborPositions(pos)
+          // Don't get into 9
           .filter((p) => this.getHeight(p)! < 9)
+          // Don't add something already in `positions`
           .filter((p) => !positions.has(posId(p)))
+          // Don't add something already in `outline`
           .filter((p) => !outline.has(posId(p)))
+          // for everything else, add to newOutline
           .forEach((p) => newOutline.set(posId(p), p));
       });
       outline.clear();
