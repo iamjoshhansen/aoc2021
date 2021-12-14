@@ -1,5 +1,6 @@
 export * from './copy';
 export * from './difference';
+export * from './graph';
 export * from './multiply';
 export * from './range';
 export * from './sort-by';
