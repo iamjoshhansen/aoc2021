@@ -4,114 +4,20 @@
 </header>
 
 <nav class="nav">
-  <a class="nav-item" routerLinkActive="nav-item--active" routerLink="day-01"
-    >Day 1</a
-  >
-  <a
-    class="nav-item"
-    routerLinkActive="nav-item--active"
-    routerLink="day-01-part-2"
-    >p2</a
-  >
-  <a class="nav-item" routerLinkActive="nav-item--active" routerLink="day-02"
-    >Day 2</a
-  >
-  <a
-    class="nav-item"
-    routerLinkActive="nav-item--active"
-    routerLink="day-02-part-2"
-    >p2</a
-  >
-  <a class="nav-item" routerLinkActive="nav-item--active" routerLink="day-03"
-    >Day 3</a
-  >
-  <a
-    class="nav-item"
-    routerLinkActive="nav-item--active"
-    routerLink="day-03-part-2"
-    >p2</a
-  >
-  <a class="nav-item" routerLinkActive="nav-item--active" routerLink="day-04"
-    >Day 4</a
-  >
-  <a
-    class="nav-item"
-    routerLinkActive="nav-item--active"
-    routerLink="day-04-part-2"
-    >p2</a
-  >
-  <a class="nav-item" routerLinkActive="nav-item--active" routerLink="day-05"
-    >Day 5</a
-  >
-  <a
-    class="nav-item"
-    routerLinkActive="nav-item--active"
-    routerLink="day-05-part-2"
-    >p2</a
-  >
-  <a class="nav-item" routerLinkActive="nav-item--active" routerLink="day-06"
-    >Day 6</a
-  >
-  <a
-    class="nav-item"
-    routerLinkActive="nav-item--active"
-    routerLink="day-06-part-2"
-    >p2</a
-  >
-  <a class="nav-item" routerLinkActive="nav-item--active" routerLink="day-07"
-    >Day 7</a
-  >
-  <a
-    class="nav-item"
-    routerLinkActive="nav-item--active"
-    routerLink="day-07-part-2"
-    >p2</a
-  >
-  <a class="nav-item" routerLinkActive="nav-item--active" routerLink="day-08"
-    >Day 8</a
-  >
-  <a
-    class="nav-item"
-    routerLinkActive="nav-item--active"
-    routerLink="day-08-part-2"
-    >p2</a
-  >
-  <a class="nav-item" routerLinkActive="nav-item--active" routerLink="day-09"
-    >Day 9</a
-  >
-  <a
-    class="nav-item"
-    routerLinkActive="nav-item--active"
-    routerLink="day-09-part-2"
-    >p2</a
-  >
-  <a class="nav-item" routerLinkActive="nav-item--active" routerLink="day-10"
-    >Day 10</a
-  >
-  <a
-    class="nav-item"
-    routerLinkActive="nav-item--active"
-    routerLink="day-10-part-2"
-    >p2</a
-  >
-  <a class="nav-item" routerLinkActive="nav-item--active" routerLink="day-11"
-    >Day 11</a
-  >
-  <a
-    class="nav-item"
-    routerLinkActive="nav-item--active"
-    routerLink="day-11-part-2"
-    >p2</a
-  >
-  <a class="nav-item" routerLinkActive="nav-item--active" routerLink="day-12"
-    >Day 12</a
-  >
-  <a
-    class="nav-item"
-    routerLinkActive="nav-item--active"
-    routerLink="day-12-part-2"
-    >p2</a
-  >
+  <ng-container *ngFor="let day of days">
+    <a
+      class="nav-item"
+      routerLinkActive="nav-item--active"
+      [routerLink]="'day-' + day.toString().padStart(2, '0')"
+      >Day {{ day }}</a
+    >
+    <a
+      class="nav-item"
+      routerLinkActive="nav-item--active"
+      [routerLink]="'day-' + day.toString().padStart(2, '0') + '-part-2'"
+      >p2</a
+    >
+  </ng-container>
 </nav>
 
 <div class="content">

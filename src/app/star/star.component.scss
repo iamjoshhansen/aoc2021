@@ -17,10 +17,10 @@
   border: solid 1px #777;
   border-radius: 0;
   resize: vertical;
-  white-space: nowrap;
   font-family: var(--font-mono);
 }
 
 .input {
   height: 10em;
+  white-space: nowrap;
 }
