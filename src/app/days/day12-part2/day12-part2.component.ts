@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { day12InputA as input } from 'src/app/days/day12/day12-input';
+import { day12InputExample as input } from 'src/app/days/day12/day12-input';
 
 import { Star } from 'src/app/star/star';
 import { Graph } from 'src/app/utils/graph';

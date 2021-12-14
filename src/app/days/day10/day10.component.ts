@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { day10InputA as input } from 'src/app/days/day10/day10-input';
+import { day10InputExample as input } from 'src/app/days/day10/day10-input';
 import { Star } from 'src/app/star/star';
 import { sum } from 'src/app/utils';
 
