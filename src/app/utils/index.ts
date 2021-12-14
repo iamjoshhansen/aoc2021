@@ -1,6 +1,7 @@
 export * from './copy';
 export * from './difference';
 export * from './graph';
+export * from './grid-2d';
 export * from './multiply';
 export * from './range';
 export * from './sort-by';
