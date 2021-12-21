@@ -31,6 +31,8 @@ import { Day12Component } from './days/day12/day12.component';
 import { Day12Part2Component } from './days/day12-part2/day12-part2.component';
 import { Day13Component } from './days/day13/day13.component';
 import { Day13Part2Component } from './days/day13-part2/day13-part2.component';
+import { Day14Component } from './days/day14/day14.component';
+import { Day14Part2Component } from './days/day14-part2/day14-part2.component';
 
 @NgModule({
   declarations: [
@@ -62,6 +64,8 @@ import { Day13Part2Component } from './days/day13-part2/day13-part2.component';
     Day12Part2Component,
     Day13Component,
     Day13Part2Component,
+    Day14Component,
+    Day14Part2Component,
   ],
   imports: [BrowserModule, FormsModule, AppRoutingModule],
   providers: [],
