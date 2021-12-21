@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { day14InputA as input } from 'src/app/days/day14/day14-input';
+import { day14InputExample as input } from 'src/app/days/day14/day14-input';
 import { Star } from 'src/app/star/star';
 
 function* polymerGrower(template: string, rules: Map<string, string>) {
