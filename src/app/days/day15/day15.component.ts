@@ -1,5 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { day15InputExampleB as input } from 'src/app/days/day15/day15-input';
+import { day15InputExample as input } from 'src/app/days/day15/day15-input';
 import { Star } from 'src/app/star/star';
 import { Grid2D, Position, toInt, normalize, Canvas } from 'src/app/utils';
 

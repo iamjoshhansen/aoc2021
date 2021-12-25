@@ -1,5 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { day15Input as input } from 'src/app/days/day15/day15-input';
+import { day15InputExample as input } from 'src/app/days/day15/day15-input';
 import Heap from 'heap';
 
 import { Star } from 'src/app/star/star';
