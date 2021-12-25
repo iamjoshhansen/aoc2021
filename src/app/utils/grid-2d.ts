@@ -1,4 +1,4 @@
-interface Position {
+export interface Position {
   x: number;
   y: number;
 }
@@ -25,6 +25,10 @@ export class Grid2D<T> {
 
   get valuesAndPositions(): ValueAndPosition<T>[] {
     return [...this.valuesAndPositionsGenerator()];
+  }
+
+  get positions2D() {
+    return this.values2D.map((_, y) => _.map((__, x) => ({ x, y })));
   }
 
   constructor(
@@ -74,6 +78,15 @@ export class Grid2D<T> {
     ]
       .filter((pos) => this.isInDomain(pos))
       .map((pos) => this.getValue(pos)!);
+  }
+
+  neighborPositionsFromSides({ x, y }: Position): Position[] {
+    return [
+      { x, y: y - 1 }, // top
+      { x: x - 1, y }, // left
+      { x: x + 1, y }, // right
+      { x, y: y + 1 }, // bottom
+    ].filter((pos) => this.isInDomain(pos));
   }
 
   neighborsFromDiagnals({ x, y }: Position): T[] {

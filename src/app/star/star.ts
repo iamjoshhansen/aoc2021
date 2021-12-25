@@ -11,6 +11,12 @@ import {
 export abstract class Star implements OnInit, OnDestroy {
   private destroyed = new Subject<void>();
 
+  private readonly solveTimeSubject = new BehaviorSubject<number>(0);
+  public readonly solveTime = this.solveTimeSubject.pipe(
+    filter((x) => x !== 0),
+    distinctUntilChanged()
+  );
+
   private inputSubject = new BehaviorSubject<string>('');
   readonly inputObservable = this.inputSubject.pipe(
     filter((x) => x.length > 0),
@@ -39,7 +45,9 @@ export abstract class Star implements OnInit, OnDestroy {
 
   async processInput(input: string) {
     this.resultSubject.next(`working...`);
+    const start = new Date().getTime();
     const result = await this.solve(input);
+    this.solveTimeSubject.next(new Date().getTime() - start);
     this.resultSubject.next(`${result}`);
   }
 

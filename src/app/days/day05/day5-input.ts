@@ -11,7 +11,7 @@ export const day5InputExample = `
 5,5 -> 8,2
 `.trim();
 
-export const day5InputA = `
+export const day5Input = `
 989,854 -> 521,854
 831,695 -> 402,266
 38,805 -> 306,537

@@ -19,7 +19,7 @@ export const day11InputExample = `
 5283751526
 `.trim();
 
-export const day11InputA = `
+export const day11Input = `
 5433566276
 6376253438
 8458636316

@@ -1,7 +1,13 @@
-<h3>Day {{ day }}{{ isPart2 ? ' (part 2)' : ''}}</h3>
+<h3>Day {{ day }}{{ isPart2 ? " (part 2)" : "" }}</h3>
 
 <h4>Input</h4>
 <textarea [(ngModel)]="input" class="input"></textarea>
 
 <h4>Result</h4>
 <textarea class="result" readonly>{{ result }}</textarea>
+<div>
+  <em *ngIf="!(solveTimeObservable | async)">working...</em>
+  <em *ngIf="solveTimeObservable | async"
+    >Solved in {{ solveTimeObservable | async }}ms</em
+  >
+</div>

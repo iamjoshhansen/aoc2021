@@ -7,5 +7,5 @@ import { range } from './utils';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  days = [...range(1, 14)];
+  days = [...range(1, 15)];
 }

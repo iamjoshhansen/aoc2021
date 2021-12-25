@@ -11,7 +11,7 @@ export const day1InputExample = `
 263
 `.trim();
 
-export const day1InputA = `
+export const day1Input = `
 198
 208
 209

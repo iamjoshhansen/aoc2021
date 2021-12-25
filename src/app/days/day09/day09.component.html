@@ -1,4 +1,9 @@
-<app-star [day]="9" [(input)]="input" [result]="result | async"></app-star>
+<app-star
+  [day]="9"
+  [(input)]="input"
+  [result]="result | async"
+  [solveTime]="solveTime | async"
+></app-star>
 
 <table class="grid" *ngIf="grid">
   <tr *ngFor="let row of grid.heights; let y = index">

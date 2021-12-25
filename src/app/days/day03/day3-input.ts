@@ -13,7 +13,7 @@ export const day3InputExample = `
 01010
 `.trim();
 
-export const day3InputA = `
+export const day3Input = `
 110000000001
 010011111011
 111000011110

@@ -31,7 +31,7 @@ export const day14InputExampleB = `
 ¾1 -> ⅞
 `.trim();
 
-export const day14InputA = `
+export const day14Input = `
 BCHCKFFHSKPBSNVVKVSK
 
 OV -> V

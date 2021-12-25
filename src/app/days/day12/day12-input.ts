@@ -8,7 +8,7 @@ A-end
 b-end
 `.trim();
 
-export const day12InputA = `
+export const day12Input = `
 vn-DD
 qm-DD
 MV-xy

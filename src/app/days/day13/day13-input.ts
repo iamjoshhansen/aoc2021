@@ -22,7 +22,7 @@ fold along y=7
 fold along x=5
 `.trim();
 
-export const day13InputA = `
+export const day13Input = `
 323,305
 512,845
 780,175

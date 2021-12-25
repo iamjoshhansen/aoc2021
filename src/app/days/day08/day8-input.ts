@@ -11,7 +11,7 @@ egadfb cdbfeg cegd fecab cgb gbdefca cg fgcdab egfdb bfceg | gbdfcae bgc cg cgb
 gcafb gcf dcaebfg ecagb gf abcdeg gaef cafbge fdbac fegbdc | fgae cfgab fg bagce
 `.trim();
 
-export const day8InputA = `
+export const day8Input = `
 badf gadfec bgcad ad dbcfg gcaeb fecdgab gad bgcadf efcdgb | gcadb ad agd deacfg
 adgfeb dagecf ceadg edabc ceg dfacebg fgead gfcd becagf gc | acdeg efbcag agfcde fagceb
 fedgcb gcadb edgcf af fbcedga gdafce faebcg acf deaf gdafc | edafcg fa ecagfd acdbg

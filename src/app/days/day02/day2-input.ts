@@ -7,7 +7,7 @@ down 8
 forward 2
 `.trim();
 
-export const day2InputA = `
+export const day2Input = `
 forward 3
 down 7
 forward 7

@@ -1,6 +1,11 @@
 <app-star
-  [day]="10"
+  [day]="15"
+  [isPart2]="true"
   [(input)]="input"
   [result]="result | async"
   [solveTime]="solveTime | async"
 ></app-star>
+
+<div class="canvas-wrapper">
+  <canvas #canvas></canvas>
+</div>
